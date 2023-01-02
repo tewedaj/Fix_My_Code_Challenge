@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-"""
+""" 
 User class
 """
 
-
-class User:
+class User():
     """ Documentation """
+
+    __email = None
 
     def __init__(self):
         """ Documentation """
@@ -15,7 +16,7 @@ class User:
     def email(self):
         """ Documentation """
         return self.__email
-
+    
     @email.setter
     def email(self, value):
         """ Documentation """
@@ -23,7 +24,9 @@ class User:
             raise TypeError("email must be a string")
         self.__email = value
 
-
+    
+   
+    
 if __name__ == "__main__":
 
     u = User()

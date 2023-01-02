@@ -1,16 +1,14 @@
 #!/usr/bin/python3
-"""
-module for Square clas
-"""
+""" Square module. """
 
 
-class Square:
-    """ Square class """
+class Square():
+    """ Square class. """
+    width = 0
+    height = 0
 
     def __init__(self, *args, **kwargs):
-        """ initiailize a new Square obj """
-        self.width = 0
-        self.height = 0
+        """ Square class initialized """
         for key, value in kwargs.items():
             setattr(self, key, value)
 
@@ -19,15 +17,16 @@ class Square:
         return self.width * self.height
 
     def permiter_of_my_square(self):
-        """ Perimeter of the square """
+        """ Permiter of the square """
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
-        """ formatted attributes """
+        """ String representation of the square instance """
         return "{}/{}".format(self.width, self.height)
 
 
 if __name__ == "__main__":
+    """ Create Square instance """
     s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
